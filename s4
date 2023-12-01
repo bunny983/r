@@ -1,0 +1,13 @@
+library(cluster)
+pam.result<-pam(iris,3)
+pam.result
+table(pam.result$clustering,iris$Species)
+plot(pam.result)
+
+data<-data.frame("regdNo"=c(1:10),"name"=letters[1:10],"marks"=c(21:30))
+data
+print(ncol(data))
+print(str(data))
+print(colnames(data))
+x<-sapply(data,mean)
+x
