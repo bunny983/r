@@ -1,3 +1,12 @@
+input<-mtcars[,c('mpg','disp','hp','wt')]
+x<-lm(mpg~disp+hp+wt,data=input)
+print(x)
+X<-coef(x)[1]
+X
+Xdisp<-coef(x)[2]
+Xdisp
+
+
 data<-data.frame("regdNo"=c(1:10),
                  "name"=letters[1:10],
                  "marks"=c(21:30))
