@@ -1,0 +1,9 @@
+data<-data.frame("regdNo"=c(1:10),
+                 "name"=letters[1:10],
+                 "marks"=c(21:30))
+print(data)
+rowbind<-rbind(data,c(11,"z",31))
+print(rowbind)
+
+colbind<-cbind(data,"rank"=c(1:10))
+colbind
