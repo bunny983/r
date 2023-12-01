@@ -1,0 +1,10 @@
+install.packages("fpc")
+library(fpc)
+iris1<-iris[-5]
+db<-dbscan(iris1,eps=0.42,MinPts=5)
+db
+table(db$cluster,iris$Species)
+plot(db,iris1)
+plot(db,iris1[,c(1,4)])
+
+
