@@ -1,0 +1,17 @@
+str(iris)
+set.seed(1234)
+ind<-sample(2,nrow(iris),replace=TRUE,prob=c(0.7,0.3))
+traindata<-iris[ind==1]
+
+install.packages("party")
+library(party)
+myFormula<-Species~Sepal.Length+Sepal.Width+Petal.Length+Petal.Width
+x<-ctree(myFormula,data=TrainData)
+plot(x)
+
+data<-read.csv("rr.csv")
+data
+
+df<-data.frame("regdNo"=c(1:10),"name"=letters[1:10],"marks"=c(21:30))
+data
+write.csv(df,"exports.csv",row.names =FALSE)
