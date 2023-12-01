@@ -1,0 +1,14 @@
+plot(mpg~wt,data=mtcars,col=2)
+x<-lm(mpg~wt,data=mtcars)
+summary(x)
+abline(x,lwd=2,col="green")
+bs<-round(coef(x),3)
+bs
+
+a<-c(1,2,3)
+b<-c(4,5,6)
+z<-c(a,b)
+z
+print(z[2])
+print(z[-1])
+print(z[1:3])
