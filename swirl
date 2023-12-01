@@ -1,0 +1,24 @@
+install.packages("swirl")
+library(swirl)
+swirl::install_course("Getting and Cleaning Data")
+swirl()
+path2csv<-""
+
+mydf<-read.csv(path2csv,stringsAsFactors=FALSE)
+mydf
+
+library(dplyr)
+cran<-tbl_df(mydf)
+rm("mydf")
+cran
+
+select(cran,ip_id,packages,country)
+filter(cran,country==US|| country==IN)
+
+summarise(cran,avg=mean(size))
+
+cran2<-select(cran,size:ip_id)
+arrange(cran2,ip_id)
+
+cran3<-select(cran,ip_id,packages,size)
+mutate(cran3,size_mb=size/2^20,size_gb=size/2^10)
