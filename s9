@@ -15,7 +15,14 @@ term_freq
 term_words<-colSums(term_freq)
 term_words
 
-x<-c(1,1,1,1,2,2,2,2,2,3,3,3,4,4,5,5,5)
-hist(x,main="histogram",xlab="marks",col="brown")
+#histogram
+x<-c(1,1,1,1,1,2,2,2,3,3,3,3,4,4)
+hist(x,main="histogram",
+     xlab="marks",
+     col="brown")
 
-plot(mtcars$mpg,mtcars$wt,main="scatterplot",xlab="mileage",ylab="weight")
+#scatterplot
+plot(mtcars$mpg,mtcars$wt,
+     data="sactterplot",
+     xlab="mileage",
+     ylab="weight")
