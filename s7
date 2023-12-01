@@ -5,7 +5,7 @@ traindata<-iris[ind==1]
 install.packages("party")
 library(party)
 myFormula<-Species~Sepal.Length+Sepal.Width+Petal.Length+Petal.Width
-x<-ctree(myFormula,data=TrainData)
+x<-ctree(myFormula,data=trainData)
 plot(x)
 
 
