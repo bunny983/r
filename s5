@@ -1,0 +1,17 @@
+install.packages("fpc")
+library(fpc)
+iris1<-iris[-5]
+db<-dbscan(iris1,eps=0.42,MinPts=5)
+db
+table(db$cluster,iris$Species)
+plot(db,iris1)
+plot(db,iris1[,c(1,4)])
+
+minmax<-function(x)
+{
+  (x-min(x))/(max(x)-min(x))
+}
+x<-as.data.frame(lapply(iris[1:4],minmax))
+head(x)
+y<-as.data.frame(lapply(iris[1:4],scale))
+head(y)
