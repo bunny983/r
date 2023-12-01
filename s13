@@ -7,6 +7,8 @@ head(x)
 y<-as.data.frame(lapply(iris[1:4],scale))
 head(y)
 
+
+
 install.packages("swirl")
 library(swirl)
 swirl::install_course("Getting and Cleaning Data")
